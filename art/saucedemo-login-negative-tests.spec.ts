@@ -8,9 +8,9 @@ test('Negative -> empty username, valid password', async ({page}) => {
 
     await page.locator('input[id="login-button"]').click()
 
-    let actualErrorMessage = await page.locator('h3[data-test="error"]').innerText()
+    let actualErrorMessage = await page.locator('h3[data-test="error"]')
     let expectedErrorMessage = 'Epic sadface: Username is required'
-    expect(actualErrorMessage).toBe(expectedErrorMessage)
+    expect(actualErrorMessage).toHaveText(expectedErrorMessage)
 })
 
 test('Negative -> valid username, empty password', async ({page}) => {
@@ -21,9 +21,9 @@ test('Negative -> valid username, empty password', async ({page}) => {
 
     await page.locator('input[id="login-button"]').click()
 
-    let actualErrorMessage = await page.locator('h3[data-test="error"]').innerText()
+    let actualErrorMessage = await page.locator('h3[data-test="error"]')
     let expectedErrorMessage = 'Epic sadface: Password is required'
-    expect(actualErrorMessage).toBe(expectedErrorMessage)
+    expect(actualErrorMessage).toHaveText(expectedErrorMessage)
 })
 
 test('Negative -> incorrect/not matching/invalid username password combo', async ({page}) => {
@@ -37,7 +37,7 @@ test('Negative -> incorrect/not matching/invalid username password combo', async
 
     await page.locator('input[id="login-button"]').click()
 
-    let actualErrorMessage = await page.locator('h3[data-test="error"]').innerText()
+    let actualErrorMessage = await page.locator('h3[data-test="error"]')
     let expectedErrorMessage = 'Epic sadface: Username and password do not match any user in this service'
-    expect(actualErrorMessage).toBe(expectedErrorMessage)
+    expect(actualErrorMessage).toHaveText(expectedErrorMessage)
 })
