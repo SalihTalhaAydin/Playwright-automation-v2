@@ -12,5 +12,6 @@ test('LogIn with Valid credentials', async ({page}) => {
     await page.locator('input[id="login-button"]').click()
 
     let expectedURL = 'https://www.saucedemo.com/inventory.html'
+    
     expect(await page.url()).toBe(expectedURL)
 })
