@@ -6,6 +6,7 @@
 
 import { test, expect } from "@playwright/test";
 test('Positive login test ', async ({ page }) => { 
+    await page.goto("https://www.saucedemo.com/");
     await page.locator('input[id="user-name"]').fill("problem_user");
     await page.waitForTimeout(2_000)
     await page.locator('input[id="password"]').fill("secret_sauce");
