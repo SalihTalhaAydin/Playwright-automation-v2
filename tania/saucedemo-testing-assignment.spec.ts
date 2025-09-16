@@ -9,7 +9,7 @@ await page.goto("https://www.saucedemo.com/")
 // user enters valid username
 await page.locator('input[data-test="username"]').fill('standard_user')
 // user enters valid password.
-await page.locator('input[id="user-name"]').fill('secret_sauce')
+await page.locator('input[data-test="password"]').fill('secret_sauce')
 // user click on login button.
 await page.locator('input[class="submit-button btn_action"]').click()
 // user is redirected to their homepage.
