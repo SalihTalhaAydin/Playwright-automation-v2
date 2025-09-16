@@ -5,7 +5,7 @@ test('Testing Sauce login page', async ({ page }) => {
      
      await page.goto('https://www.saucedemo.com/');
      let loginInput = page.locator('div[class="form_group"] [id="user-name"]');
-     await loginInput.type("secret_sauce")
+     await loginInput.type("locked_out_user")
      await page.waitForTimeout(2_000)
 
      let passwordInput = page.locator('div[class="form_group"] [id="password"]');
