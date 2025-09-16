@@ -13,4 +13,7 @@ test('Positive login test ', async ({ page }) => {
     await page.waitForTimeout(2_000);
     await page.locator('input[name="login-button"]').click()
     await page.waitForTimeout(2_000);
+    let expectedText = "Swag Labs";
+    let title = page.locator('div[class="app_logo"]');
+    expect(title).toHaveText(expectedText);
 })
