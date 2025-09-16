@@ -13,6 +13,7 @@ await page.locator('input[id="user-name"]').fill('secret_sauce')
 // user click on login button.
 await page.locator('input[class="submit-button btn_action"]').click()
 // user is redirected to their homepage.
+let expectedText = "Products"
  let titleLocator = page.locator('span[class="title"]');
-  await expect(titleLocator).toHaveText('Products')
+  await expect(titleLocator).toHaveText(expectedText)
 }) 
