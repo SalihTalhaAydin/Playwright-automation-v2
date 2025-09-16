@@ -13,7 +13,7 @@ test('negative sauce demo login functionality', async ({ page }) => {
 
 test('1 negative sauce demo login functionality', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/')
-    await page.locator('input[id="user-name"]').fill(' ')
+    await page.locator('input[id="user-name"]').fill('')
     await page.locator('input[id="password"]').fill('jdhfkshfk')
     await page.locator('input[id="login-button"]').click()
     let expectedText = 'Epic sadface: Username is required'
