@@ -16,7 +16,7 @@
     "url": "https://github.com/SalihTalhaAydin/Playwright-automation-v2/issues"
   },
   "homepage": "https://github.com/SalihTalhaAydin/Playwright-automation-v2#readme",
-  "devDependencies": {
+  "dependencies": {
     "@playwright/test": "^1.55.0"
   }
 }
